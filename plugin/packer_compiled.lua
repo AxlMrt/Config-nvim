@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/axel/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/axel/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/axel/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/axel/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/axel/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
+local package_path_str = "/home/axel/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?.lua;/home/axel/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?/init.lua;/home/axel/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?.lua;/home/axel/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/axel/.cache/nvim/packer_hererocks/2.1.1694285958/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -99,10 +99,20 @@ _G.packer_plugins = {
     path = "/home/axel/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["colorbuddy.nvim"] = {
+  ["deoplete-clang"] = {
     loaded = true,
-    path = "/home/axel/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
+    path = "/home/axel/.local/share/nvim/site/pack/packer/start/deoplete-clang",
+    url = "https://github.com/zchee/deoplete-clang"
+  },
+  ["deoplete.nvim"] = {
+    loaded = true,
+    path = "/home/axel/.local/share/nvim/site/pack/packer/start/deoplete.nvim",
+    url = "https://github.com/Shougo/deoplete.nvim"
+  },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/axel/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
   },
   ["git.nvim"] = {
     loaded = true,
@@ -118,6 +128,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/axel/.local/share/nvim/site/pack/packer/start/hardtime.nvim",
     url = "https://github.com/m4xshen/hardtime.nvim"
+  },
+  ["live-server.nvim"] = {
+    commands = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/axel/.local/share/nvim/site/pack/packer/opt/live-server.nvim",
+    url = "https://github.com/aurum77/live-server.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -148,11 +166,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/axel/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "/home/axel/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -240,6 +253,16 @@ _G.packer_plugins = {
     path = "/home/axel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/axel/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-prisma"] = {
+    loaded = true,
+    path = "/home/axel/.local/share/nvim/site/pack/packer/start/vim-prisma",
+    url = "https://github.com/prisma/vim-prisma"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/axel/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
@@ -252,6 +275,32 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-tmux-navigation]], true)
 try_loadstring("\27LJ\2\n¾\3\0\0\6\0\20\00016\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\3\0B\1\2\0016\1\4\0009\1\5\0019\1\6\1'\3\a\0'\4\b\0009\5\t\0B\1\4\0016\1\4\0009\1\5\0019\1\6\1'\3\a\0'\4\n\0009\5\v\0B\1\4\0016\1\4\0009\1\5\0019\1\6\1'\3\a\0'\4\f\0009\5\r\0B\1\4\0016\1\4\0009\1\5\0019\1\6\1'\3\a\0'\4\14\0009\5\15\0B\1\4\0016\1\4\0009\1\5\0019\1\6\1'\3\a\0'\4\16\0009\5\17\0B\1\4\0016\1\4\0009\1\5\0019\1\6\1'\3\a\0'\4\18\0009\5\19\0B\1\4\1K\0\1\0\25NvimTmuxNavigateNext\n<C-n>\31NvimTmuxNavigateLastActive\n<C-\\>\26NvimTmuxNavigateRight\n<C-l>\23NvimTmuxNavigateUp\n<C-k>\25NvimTmuxNavigateDown\n<C-j>\25NvimTmuxNavigateLeft\n<C-h>\6n\bset\vkeymap\bvim\1\0\1\24disable_when_zoomed\2\nsetup\25nvim-tmux-navigation\frequire\0", "config", "nvim-tmux-navigation")
 time([[Config for nvim-tmux-navigation]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'LiveServer', function(cmdargs)
+          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServer', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LiveServer ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LiveServerStart', function(cmdargs)
+          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStart', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LiveServerStart ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LiveServerStop', function(cmdargs)
+          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStop', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LiveServerStop ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

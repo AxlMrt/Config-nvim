@@ -2,6 +2,10 @@ local status, ts = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
 ts.setup {
+  sync_install = false,
+  auto_install = true,
+  ignore_install = { 'javascript' },
+  modules = {},
   highlight = {
     enable = true,
     disable = {},
@@ -27,6 +31,10 @@ ts.setup {
   },
   autotag = {
     enable = true,
+    enable_rename = true,
+    enable_close = true,
+    enable_close_on_slash = true,
+    filetypes = { 'html', 'jsx', 'tsx', 'xml' }
   },
   context_commentstring = {
     enable         = true,
