@@ -24,7 +24,7 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Change all occurences in text
-keymap.set('n', '<leader>*', ":%s/<C-r><C-w>/")
+keymap.set('n', '<leader>*', ":%s/<C-r><C-w>/g")
 
 -- Yank into system clipboard
 keymap.set({ "n", "v" }, "<leader>y", [["+y]])

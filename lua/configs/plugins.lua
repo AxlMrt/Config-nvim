@@ -64,6 +64,19 @@ packer.startup(function(use)
   use 'MunifTanjim/prettier.nvim'
   use 'folke/zen-mode.nvim'
 
+  -- ChatGPT
+  use({
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  })
+
   -- Theme
   use { "catppuccin/nvim", as = "catppuccin" }
 
